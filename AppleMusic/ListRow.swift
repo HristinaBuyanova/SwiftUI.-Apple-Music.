@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ListRow: View {
-    var list: List
+    var list: ListData
 
     var body: some View {
         HStack(spacing: 10) {
@@ -25,18 +25,12 @@ struct ListRow: View {
             Text(list.title)
                 .font(.title2)
 
-            Spacer()
-
-            Image(systemName: "line.3.horizontal")
-                .resizable()
-                .foregroundStyle(.placeholder)
-                .frame(width: 20, height: 20)
-
         }
         .padding([.trailing, .leading], 10)
+        .frame(height: 40)
     }
 }
 
 #Preview {
-    ListRow(list: List.data[10])
+    ListRow(list: ListData.data[0])
 }

@@ -2,7 +2,7 @@
 import Foundation
 import SwiftUI
 
-struct List: Hashable, Identifiable {
+struct ListData: Hashable, Identifiable {
     var id = UUID()
     var title: String
     private var icon: String
@@ -21,18 +21,18 @@ struct List: Hashable, Identifiable {
 
 }
 
-extension List {
-    static var data: [List] = [List(title: "Плейлисты", icon: "music.note.list"),
-                               List(title: "Артисты", icon: "music.mic"),
-                               List(title: "Альбомы", icon: "square.stack"),
-                               List(title: "Песни", icon: "music.note"),
-                               List(title: "Телешоу и фильмы", icon: "display"),
-                               List(title: "Видеоклипы", icon: "music.note.tv"),
-                               List(title: "Жанры", icon: "guitars"),
-                               List(title: "Сборники", icon: "person.2.crop.square.stack"),
-                               List(title: "Авторы", icon: "music.quarternote.3"),
-                               List(title: "Загружено", icon: "arrowshape.down.circle"),
-                               List(title: "Домашняя коллекция", icon: "music.note.house")]
+extension ListData {
+    static var data: [ListData] = [ListData(title: "Плейлисты", icon: "music.note.list"),
+                               ListData(title: "Артисты", icon: "music.mic"),
+                               ListData(title: "Альбомы", icon: "square.stack"),
+                               ListData(title: "Песни", icon: "music.note"),
+                               ListData(title: "Телешоу и фильмы", icon: "display"),
+                               ListData(title: "Видеоклипы", icon: "music.note.tv"),
+                               ListData(title: "Жанры", icon: "guitars"),
+                               ListData(title: "Сборники", icon: "person.2.crop.square.stack"),
+                               ListData(title: "Авторы", icon: "music.quarternote.3"),
+                               ListData(title: "Загружено", icon: "arrowshape.down.circle"),
+                               ListData(title: "Домашняя коллекция", icon: "music.note.house")]
 
     mutating func toggleSelection() {
         isEdit.toggle()
