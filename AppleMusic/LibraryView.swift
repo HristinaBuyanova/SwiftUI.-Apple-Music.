@@ -2,35 +2,27 @@
 
 import SwiftUI
 
-var firstText = "Ищите свою музыку?"
-var secondText = "Здесь появится купленная Вами в iTunes Store музыка"
-var mediateka = "Медиатека"
-
 struct LibraryView: View {
     var body: some View {
-        NavigationSplitView {
-            TabView {
-                VStack {
-                    Text(firstText)
-                    Text(secondText)
-                        .multilineTextAlignment(.center)
+        NavigationStack {
+            Text(firstText)
+                .bold()
+                .font(.system(size: 24))
+                .navigationTitle(mediateka)
+
+            Text(secondText)
+                .multilineTextAlignment(.center)
+                .foregroundStyle(.gray)
+                .toolbar {
+                    Button("Править") { }
+                    .foregroundStyle(.red)
+                    .bold()
                 }
-                .tabItem {
-                    Image(systemName: "play.square.stack.fill")
-                    Text(mediateka)
-                }
-
-                Text("")
-
-            }
-
-            .navigationTitle(mediateka)
         }
-    detail: {
-            Text("Library View")
-        }
+        .offset(y: -50)
     }
 }
+
 
 #Preview {
     LibraryView()

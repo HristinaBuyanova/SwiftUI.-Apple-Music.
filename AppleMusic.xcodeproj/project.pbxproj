@@ -14,6 +14,7 @@
 		6E8C8A682B7505800088DC07 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8C8A672B75057F0088DC07 /* LibraryView.swift */; };
 		6E8C8A6A2B753DB40088DC07 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8C8A692B753DB30088DC07 /* PlayerView.swift */; };
 		6E8C8A6C2B7626670088DC07 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8C8A6B2B7626670088DC07 /* BlurView.swift */; };
+		6E8C8A6E2B7632C40088DC07 /* TextData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8C8A6D2B7632C40088DC07 /* TextData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		6E8C8A672B75057F0088DC07 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		6E8C8A692B753DB30088DC07 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		6E8C8A6B2B7626670088DC07 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		6E8C8A6D2B7632C40088DC07 /* TextData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				6E8C8A592B74FAC50088DC07 /* AppleMusicApp.swift */,
+				6E8C8A6D2B7632C40088DC07 /* TextData.swift */,
 				6E8C8A5B2B74FAC50088DC07 /* ContentView.swift */,
 				6E8C8A672B75057F0088DC07 /* LibraryView.swift */,
 				6E8C8A692B753DB30088DC07 /* PlayerView.swift */,
@@ -148,6 +151,7 @@
 			files = (
 				6E8C8A5C2B74FAC50088DC07 /* ContentView.swift in Sources */,
 				6E8C8A682B7505800088DC07 /* LibraryView.swift in Sources */,
+				6E8C8A6E2B7632C40088DC07 /* TextData.swift in Sources */,
 				6E8C8A6C2B7626670088DC07 /* BlurView.swift in Sources */,
 				6E8C8A5A2B74FAC50088DC07 /* AppleMusicApp.swift in Sources */,
 				6E8C8A6A2B753DB40088DC07 /* PlayerView.swift in Sources */,

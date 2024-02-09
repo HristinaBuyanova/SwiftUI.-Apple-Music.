@@ -11,9 +11,9 @@ struct PlayerView: View {
                 .cornerRadius(15)
                 .offset(x: 5)
             VStack {
-                Text("Red Hot Chili Peppers")
+                Text(artist)
                     .font(.subheadline)
-                Text("Californication")
+                Text(single)
                     .foregroundStyle(.gray)
             }
 
