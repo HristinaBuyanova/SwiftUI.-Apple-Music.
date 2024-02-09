@@ -2,7 +2,7 @@
 
 import Foundation
 
-struct RadioModel: Hashable {
+struct RadioModel: Identifiable {
     var id = UUID()
     var title: String
     var firstDescription: String

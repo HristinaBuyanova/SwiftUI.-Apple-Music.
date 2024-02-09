@@ -1,8 +1,8 @@
 
 import Foundation
 
-struct StationModel: Hashable {
-
+struct StationModel: Identifiable {
+    var id = UUID()
     var title: String
     var description: String
     var imageName: String
