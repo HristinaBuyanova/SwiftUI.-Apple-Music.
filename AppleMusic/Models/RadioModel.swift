@@ -1,7 +1,6 @@
 
 
 import Foundation
-import SwiftUI
 
 struct RadioModel: Hashable {
     var id = UUID()

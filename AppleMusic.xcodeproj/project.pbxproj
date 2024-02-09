@@ -23,6 +23,7 @@
 		6E8C8A7E2B76A1CC0088DC07 /* RadioVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8C8A7D2B76A1CC0088DC07 /* RadioVGrid.swift */; };
 		6E8C8A802B76A1DF0088DC07 /* RadioHGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8C8A7F2B76A1DF0088DC07 /* RadioHGrid.swift */; };
 		6E8C8A822B76A2C20088DC07 /* RadioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8C8A812B76A2C20088DC07 /* RadioModel.swift */; };
+		6E8C8A842B76A7190088DC07 /* StationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8C8A832B76A7190088DC07 /* StationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		6E8C8A7D2B76A1CC0088DC07 /* RadioVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioVGrid.swift; sourceTree = "<group>"; };
 		6E8C8A7F2B76A1DF0088DC07 /* RadioHGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioHGrid.swift; sourceTree = "<group>"; };
 		6E8C8A812B76A2C20088DC07 /* RadioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioModel.swift; sourceTree = "<group>"; };
+		6E8C8A832B76A7190088DC07 /* StationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				6E8C8A6D2B7632C40088DC07 /* TextData.swift */,
 				6E8C8A742B763BD70088DC07 /* ListModel.swift */,
 				6E8C8A812B76A2C20088DC07 /* RadioModel.swift */,
+				6E8C8A832B76A7190088DC07 /* StationModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				6E8C8A5C2B74FAC50088DC07 /* ContentView.swift in Sources */,
 				6E8C8A682B7505800088DC07 /* LibraryView.swift in Sources */,
 				6E8C8A802B76A1DF0088DC07 /* RadioHGrid.swift in Sources */,
+				6E8C8A842B76A7190088DC07 /* StationModel.swift in Sources */,
 				6E8C8A772B7644830088DC07 /* ListRow.swift in Sources */,
 				6E8C8A6E2B7632C40088DC07 /* TextData.swift in Sources */,
 				6E8C8A6C2B7626670088DC07 /* BlurView.swift in Sources */,
