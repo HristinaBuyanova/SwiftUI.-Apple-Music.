@@ -6,3 +6,5 @@ var secondText = "Здесь появится купленная Вами в \n 
 var mediateka = "Медиатека"
 var artist = "Red Hot Chili Peppers"
 var single = "Californication"
+var radio = "Радио"
+var search = "Поиск"
