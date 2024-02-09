@@ -17,6 +17,8 @@ struct List: Hashable, Identifiable {
     var circle: Image {
         Image(systemName: isEdit ? selectIcon : unSelectIcon)
     }
+
+
 }
 
 extension List {
@@ -31,6 +33,12 @@ extension List {
                                List(title: "Авторы", icon: "music.quarternote.3"),
                                List(title: "Загружено", icon: "arrowshape.down.circle"),
                                List(title: "Домашняя коллекция", icon: "music.note.house")]
+
+    mutating func toggleSelection() {
+        isEdit.toggle()
+    }
+
 }
+
 
 
