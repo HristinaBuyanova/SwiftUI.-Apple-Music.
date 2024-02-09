@@ -11,6 +11,7 @@ struct RadioView: View {
             }
             .navigationTitle("Радио")
         }
+        .padding(.bottom, 60)
         }
     }
 

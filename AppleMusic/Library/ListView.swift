@@ -35,6 +35,7 @@ struct ListView: View {
                 }
             }
         }
+        .padding(.bottom, 60)
     }
 }
 #Preview {
