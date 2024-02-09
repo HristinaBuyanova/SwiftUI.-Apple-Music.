@@ -12,7 +12,8 @@ struct TabBar: View {
                         Text(mediateka)
                     }
 
-                Text(radio)
+//                Text(radio)
+                RadioView()
                     .tabItem {
                         Image(systemName: "dot.radiowaves.left.and.right")
                         Text(radio)

@@ -4,7 +4,7 @@ import SwiftUI
 struct RadioHGrid: View {
 
     @State private var dataRadio = RadioModel.data
-    let rows = [GridItem(.fixed(250))]
+    let rows = [GridItem(.flexible(minimum: 250, maximum: 300))]
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHGrid(rows: rows) {
@@ -22,15 +22,17 @@ struct RadioHGrid: View {
                             .foregroundStyle(.gray)
                         Image(radio.imageName)
                             .resizable()
-                            .aspectRatio(contentMode: .fit)
+                            .aspectRatio(contentMode: .fill)
                             .clipShape(RoundedRectangle(cornerRadius: 15))
+                            .frame(width: 280, height: 150)
                     }
                 }
             }
-            .padding()
+//            Divider()
+            .padding(.top, 20)
+            .padding(.leading, 10)
 
-            Divider()
-                .padding(.top, -50)
+//                .padding(.top, -50)
         }
     }
 }

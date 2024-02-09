@@ -9,10 +9,11 @@ struct RadioVGrid: View {
     ]
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
+            Divider()
             Text("Cтанции")
                 .font(.title)
                 .bold()
-                .padding(.trailing, 250)
+                .padding(.trailing, 220)
 
             LazyVGrid(columns: colums) {
 
