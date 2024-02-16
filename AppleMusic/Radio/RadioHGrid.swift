@@ -17,6 +17,9 @@ struct RadioHGrid: View {
                         Text(radio.title)
                             .font(.title2)
                             .bold()
+                            .lineLimit(1)
+                            .frame(width: 280,
+                                   alignment: .leading)
                         Text(radio.secondDescription)
                             .font(.title3)
                             .foregroundStyle(.gray)
