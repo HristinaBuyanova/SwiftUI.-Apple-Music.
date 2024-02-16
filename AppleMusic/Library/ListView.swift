@@ -5,6 +5,7 @@ import SwiftUI
 struct ListView: View {
 
     @State private var listData = ListData.data
+    @Environment(\.dismiss) var dismiss
 
     var body: some View {
         NavigationStack {
@@ -25,10 +26,18 @@ struct ListView: View {
 
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    NavigationLink("Готово") {
-                        LibraryView()
-                            .navigationBarBackButtonHidden(true)
-
+//                    NavigationLink("Готово") {
+//                        LibraryView()
+//                            .navigationBarBackButtonHidden(true)
+//
+//                    }
+                    NavigationLink {
+                    } label: {
+                        Button {
+                            dismiss()
+                        } label: {
+                            Text("Готово")
+                        }
                     }
                     .tint(.red)
                     .bold()
