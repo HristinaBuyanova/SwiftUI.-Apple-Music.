@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-struct PlayerView: View {
+struct MiniPlayerView: View {
     var body: some View {
         HStack(spacing: 10, content: {
             Image("single")
@@ -46,5 +46,5 @@ struct PlayerView: View {
 }
 
 #Preview {
-    PlayerView()
+    MiniPlayerView()
 }

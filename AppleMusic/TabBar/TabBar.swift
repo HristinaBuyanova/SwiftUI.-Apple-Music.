@@ -27,7 +27,7 @@ struct TabBar: View {
                     }
             }
             .tint(.red)
-            PlayerView()
+            MiniPlayerView()
         })
     }
 }
