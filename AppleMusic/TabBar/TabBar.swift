@@ -19,7 +19,8 @@ struct TabBar: View {
                         Text(radio)
                     }
 
-                Text(search)
+//                Text("Поиск")
+                SeachView()
                     .tabItem {
                         Image(systemName: "magnifyingglass")
                         Text(search)
@@ -30,6 +31,7 @@ struct TabBar: View {
         })
     }
 }
+
 
 #Preview {
     TabBar()
