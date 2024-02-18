@@ -1,9 +1,4 @@
-//
-//  PlayerView.swift
-//  AppleMusic
-//
-//  Created by Христина Буянова on 17.02.2024.
-//
+
 
 import SwiftUI
 
@@ -14,6 +9,8 @@ struct PlayerView: View {
     @State private var animateContent: Bool = false
     @State private var offsetY: CGFloat = 0
     var screen = UIScreen.main.bounds.size.height
+    @State var volume: Double = 0
+    @State var duration: Double = 0
 
     var body: some View {
         GeometryReader {
@@ -39,13 +36,17 @@ struct PlayerView: View {
                     .frame(height: screen)
 
                 VStack(spacing: 15) {
-                    Image(systemName: "minus")
-                        .imageScale(.large)
-                        .font(.title)
-                        .onTapGesture {
-                            expandSheet.toggle()
-                            
-                        }
+                    Button(action: { expandSheet.toggle() },
+                           label: {
+                        Image(systemName: "minus")
+                            .imageScale(.large)
+                            .font(.system(size: 50))
+                            .tint(.white)
+                            .opacity(0.8)
+                            .frame(width: 50, height: 50)
+                            .padding()
+                    })
+
                     Spacer()
 
                     Image("single")
@@ -61,20 +62,129 @@ struct PlayerView: View {
                             Text(single)
                                 .font(.title)
                                 .bold()
+                                .foregroundStyle(.white)
                             Text(artist)
                                 .font(.title2)
+                                .foregroundStyle(.white)
+                                .opacity(0.6)
                         }
                         .padding(.leading)
                         
                         Spacer()
-                        Image(systemName: "ellipsis.circle.fill")
-                            .frame(width: 50, height: 50)
-                            .font(.title)
-                            .opacity(0.4)
+
+                        Button(action: {}, label: {
+                            Image(systemName: "ellipsis.circle")
+                                .frame(width: 50, height: 50)
+                                .font(.title)
+                                .opacity(0.4)
+                                .foregroundStyle(.white)
+                        }).padding()
 
                     }
-                    .padding([.leading, .trailing], 20)
+
                     Spacer()
+
+                    Slider(value: $duration, in: 0...4.12, step: 0.01)
+                        .tint(.white)
+                    HStack {
+                        Text(ridZero(result: duration))
+                        Spacer()
+                        Text("- \(ridZero(result: (4.12 - duration)))")
+                    }
+                    .foregroundStyle(.white)
+
+
+                    HStack(spacing: 60) {
+                        Button(action: {}, label: {
+                            Image(systemName: "backward.fill")
+                                .font(.title)
+                                .foregroundStyle(.white)
+                        })
+                        .padding()
+
+
+                        Button(action: {}, label: {
+                            Image(systemName: "play.fill")
+                                .font(.title)
+                                .foregroundStyle(.white)
+                        })
+                        .padding()
+
+
+                        Button(action: {}, label: {
+                            Image(systemName: "forward.fill")
+                                .font(.title)
+                                .foregroundStyle(.white)
+                        })
+                    }
+
+                    HStack (spacing: 15) {
+                        Image(systemName: "speaker.fill")
+                            .font(.title2)
+                            .foregroundStyle(.white)
+
+                        Slider(value: $volume, in: 0...100, step: 0.1)
+                            .tint(.white)
+                            .controlSize(.mini)
+                            .onAppear {
+                                let circle = UIImage.SymbolConfiguration(scale: .small)
+                                UISlider.appearance().setThumbImage(UIImage(systemName: "circle.fill", withConfiguration: circle), for: .normal)
+                            }
+
+
+//                        ZStack(alignment: Alignment(horizontal: .leading, vertical: .center), content: {
+//
+//                            Capsule()
+//                                .fill(Color.black.opacity(0.06))
+//                                .frame(height: 5)
+//                            Capsule()
+//                                .fill(Color.white)
+//                                .frame(width: volume, height: 4)
+//
+//                            Circle()
+//                                .fill(Color.white)
+//                                .frame(width: 20, height: 20)
+//                                .offset(x: volume)
+////                                .gesture(DragGesture().onChanged(<#T##action: (DragGesture.Value) -> Void##(DragGesture.Value) -> Void#>))
+//                        })
+//                        .padding()
+
+                        Image(systemName: "speaker.wave.3.fill")
+                            .font(.title2)
+                            .foregroundStyle(.white)
+
+                    }
+                    Spacer()
+
+                    HStack(spacing: 50) {
+                        Button(action: {}, label: {
+                            Image(systemName: "ellipsis.bubble")
+                                .font(.title)
+                                .opacity(0.8)
+                                .foregroundStyle(.white)
+                        })
+                        .padding()
+
+
+                        Button(action: {}, label: {
+                            Image(systemName: "airplayaudio")
+                                .font(.title)
+                                .opacity(0.8)
+                                .foregroundStyle(.white)
+                        })
+                        .padding()
+
+
+                        Button(action: {}, label: {
+                            Image(systemName: "list.bullet")
+                                .font(.title)
+                                .opacity(0.8)
+                                .foregroundStyle(.white)
+                        })
+                        .padding()
+
+                    }
+
 
 //                    GeometryReader {
 //                        let size = $0.size
@@ -89,13 +199,21 @@ struct PlayerView: View {
 //                    .frame(height: size.height - 50)
 //                    .padding(.vertical, size.height < 700 ? 30 : 40)
                 }
-                .padding(.top, 60)
-//                .padding(.top, safeArea.top + (safeArea.bottom == 0 ? 10 : 0))
+                .padding()
+
             }
         }
         .ignoresSafeArea(edges: .top)
+//        .onTapGesture {
+//            expandSheet.toggle()
+        }
+
+    func ridZero(result: Double) -> String {
+            let value = String(format: "%g", result)
+            return value
     }
 }
+
 
 #Preview {
     ContentView()
