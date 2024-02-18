@@ -2,6 +2,10 @@
 import SwiftUI
 
 struct MiniPlayerView: View {
+
+    var animation: Namespace.ID
+    @Binding var expandSheet: Bool
+
     var body: some View {
         HStack(spacing: 10, content: {
             Image("single")
@@ -42,9 +46,14 @@ struct MiniPlayerView: View {
 
         )
         .offset(y: -50)
+        .onTapGesture {
+            withAnimation(.easeInOut(duration: 0.3)) {
+                expandSheet = true
+            }
+        }
     }
 }
 
-#Preview {
-    MiniPlayerView()
-}
+//#Preview {
+//    MiniPlayerView(animation: <#Namespace.ID#>, expandSheet: <#Binding<Bool>#>)
+//}

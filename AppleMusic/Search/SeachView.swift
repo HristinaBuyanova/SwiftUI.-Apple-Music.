@@ -4,6 +4,8 @@ import SwiftUI
 
 struct SeachView: View {
 
+    @State private var expandSheet = false
+    @Namespace private var animation
     @State var tf = ""
     @State var category = StationModel.data
 
