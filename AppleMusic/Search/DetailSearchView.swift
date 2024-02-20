@@ -1,9 +1,4 @@
-//
-//  DetailSearchView.swift
-//  AppleMusic
-//
-//  Created by Христина Буянова on 19.02.2024.
-//
+
 
 import SwiftUI
 
@@ -17,21 +12,85 @@ struct DetailSearchView: View {
     var rows = [GridItem(.flexible())]
 
     var body: some View {
-        let detail = selectModel.detailArray
+        let details = selectModel.detailArray
 
         VStack {
             HStack {
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHGrid(rows: rows, spacing: 10) {
-                        Text("")
+                        ForEach(details, id: \.self) { detail in
+                            DetailSearchCell(detailData: detail)
+                        }
                     }
+                    .padding()
                 }
             }
+
+            HStack {
+                Text(selectModel.secondTitle)
+                    .font(.title2)
+                    .bold()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.leading, 20)
+                    .padding(.bottom, -15)
+                Text("См.все")
+                    .foregroundStyle(.red)
+                    .font(.subheadline)
+                    .padding([.trailing, .top], 20)
+            }
+            .padding(.bottom, -20)
+
+            HStack {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    LazyHGrid(rows: rows) {
+                        ForEach(selectModel.secondImage, id: \.self) { images in
+                            HStack {
+                                Image(images)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 150, height: 150)
+                                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                            }
+                        }
+                    }
+                    .padding(20)
+                }
+
+            }
+            VStack {
+                Spacer(minLength: 90)
+            }
         }
-        Text(selectModel.title)
+        .navigationTitle(selectModel.title)
+        .navigationBarBackButtonHidden()
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button {
+                    dismiss()
+                } label: {
+                    Image("chevron.left")
+                        .foregroundStyle(.red)
+                }
+
+            }
+        }
+
+        toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+
+                } label: {
+                    Image("ellipsis.circle")
+                        .foregroundStyle(.red)
+                }
+
+            }
+        }
+
     }
 }
 
+
 #Preview {
-    DetailSearchView(selectModel: SeachModel.data[0])
+    DetailSearchView(selectModel: SeachModel.data[0]).colorScheme(.dark)
 }
