@@ -4,7 +4,7 @@ import SwiftUI
 
 struct CategoryCell: View {
 
-    var category: StationModel
+    var category: SeachModel
     @State private var isActive = false
 
     var body: some View {
@@ -36,5 +36,5 @@ struct CategoryCell: View {
 }
 
 #Preview {
-    CategoryCell(category: StationModel.data[0])
+    CategoryCell(category: SeachModel.data[0])
 }

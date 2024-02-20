@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DetailSearchView: View {
 
-    var selectCategory: StationModel
+    var selectCategory: SeachModel
 
 
     var body: some View {
@@ -18,5 +18,5 @@ struct DetailSearchView: View {
 }
 
 #Preview {
-    DetailSearchView(selectCategory: StationModel.data[0])
+    DetailSearchView(selectCategory: SeachModel.data[0])
 }
