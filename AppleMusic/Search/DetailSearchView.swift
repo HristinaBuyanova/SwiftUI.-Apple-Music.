@@ -9,14 +9,29 @@ import SwiftUI
 
 struct DetailSearchView: View {
 
-    var selectCategory: SeachModel
+    var selectModel: SeachModel
+    var data = SeachModel.data
 
+    @Environment(\.dismiss) private var dismiss
+
+    var rows = [GridItem(.flexible())]
 
     var body: some View {
-        Text(selectCategory.title)
+        let detail = selectModel.detailArray
+
+        VStack {
+            HStack {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    LazyHGrid(rows: rows, spacing: 10) {
+                        Text("")
+                    }
+                }
+            }
+        }
+        Text(selectModel.title)
     }
 }
 
 #Preview {
-    DetailSearchView(selectCategory: SeachModel.data[0])
+    DetailSearchView(selectModel: SeachModel.data[0])
 }
