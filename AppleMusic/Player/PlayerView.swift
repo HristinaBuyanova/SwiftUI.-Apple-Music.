@@ -9,6 +9,7 @@ struct PlayerView: View {
     @State private var animateContent: Bool = false
     @State private var offsetY: CGFloat = 0
     var screen = UIScreen.main.bounds.size.height
+    var width = UIScreen.main.bounds.size.width / 2
     @State var volume: Double = 0
     @State var duration: Double = 0
 
@@ -33,7 +34,7 @@ struct PlayerView: View {
                     .matchedGeometryEffect(id: "BACKGROUNDVIEW", in: animation)
 
                 LinearGradient(gradient: Gradient(colors: [Color.beige, Color.black.opacity(0.7)]), startPoint: .top, endPoint: .bottom)
-                    .frame(height: screen)
+//                    .frame(height: screen)
 
                 VStack(spacing: 15) {
                     Button(action: { expandSheet.toggle() },
@@ -47,15 +48,15 @@ struct PlayerView: View {
                             .padding()
                     })
 
-                    Spacer()
+//                    Spacer()
 
                     Image("single")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 250, height: 250)
+                        .frame(width: width, height: width)
                         .cornerRadius(15)
 
-                    Spacer()
+//                    Spacer()
 
                     HStack {
                         VStack(alignment: .leading) {
@@ -82,7 +83,7 @@ struct PlayerView: View {
 
                     }
 
-                    Spacer()
+//                    Spacer()
 
                     Slider(value: $duration, in: 0...4.12, step: 0.01)
                         .tint(.white)
@@ -154,7 +155,7 @@ struct PlayerView: View {
                             .foregroundStyle(.white)
 
                     }
-                    Spacer()
+//                    Spacer()
 
                     HStack(spacing: 50) {
                         Button(action: {}, label: {
@@ -184,6 +185,7 @@ struct PlayerView: View {
                         .padding()
 
                     }
+                    .padding(.bottom, 10)
 
 
 //                    GeometryReader {
@@ -203,9 +205,7 @@ struct PlayerView: View {
 
             }
         }
-        .ignoresSafeArea(edges: .top)
-//        .onTapGesture {
-//            expandSheet.toggle()
+        .ignoresSafeArea(edges: .all)
         }
 
     func ridZero(result: Double) -> String {

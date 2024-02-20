@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6E09B4AF2B7F9980001F3F1B /* SeachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E09B4AE2B7F9980001F3F1B /* SeachView.swift */; };
+		6E7AD6872B83570300E1E13E /* DetailSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7AD6862B83570300E1E13E /* DetailSearchView.swift */; };
+		6E7AD6892B84ADB600E1E13E /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7AD6882B84ADB600E1E13E /* SearchModel.swift */; };
 		6E8C8A5A2B74FAC50088DC07 /* AppleMusicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8C8A592B74FAC50088DC07 /* AppleMusicApp.swift */; };
 		6E8C8A5C2B74FAC50088DC07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8C8A5B2B74FAC50088DC07 /* ContentView.swift */; };
 		6E8C8A5E2B74FAC80088DC07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E8C8A5D2B74FAC80088DC07 /* Assets.xcassets */; };
@@ -31,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		6E09B4AE2B7F9980001F3F1B /* SeachView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachView.swift; sourceTree = "<group>"; };
+		6E7AD6862B83570300E1E13E /* DetailSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSearchView.swift; sourceTree = "<group>"; };
+		6E7AD6882B84ADB600E1E13E /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		6E8C8A562B74FAC50088DC07 /* AppleMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E8C8A592B74FAC50088DC07 /* AppleMusicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicApp.swift; sourceTree = "<group>"; };
 		6E8C8A5B2B74FAC50088DC07 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +73,7 @@
 			children = (
 				6E09B4AE2B7F9980001F3F1B /* SeachView.swift */,
 				6EC608382B8017FF00028B07 /* CategoryCell.swift */,
+				6E7AD6862B83570300E1E13E /* DetailSearchView.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 				6E8C8A742B763BD70088DC07 /* ListModel.swift */,
 				6E8C8A812B76A2C20088DC07 /* RadioModel.swift */,
 				6E8C8A832B76A7190088DC07 /* StationModel.swift */,
+				6E7AD6882B84ADB600E1E13E /* SearchModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -236,12 +242,14 @@
 				6EC608392B8017FF00028B07 /* CategoryCell.swift in Sources */,
 				6E8C8A7C2B76A18D0088DC07 /* RadioView.swift in Sources */,
 				6E8C8A752B763BD70088DC07 /* ListModel.swift in Sources */,
+				6E7AD6892B84ADB600E1E13E /* SearchModel.swift in Sources */,
 				6E8C8A722B763B330088DC07 /* ListView.swift in Sources */,
 				6E8C8A822B76A2C20088DC07 /* RadioModel.swift in Sources */,
 				6E8C8A5C2B74FAC50088DC07 /* ContentView.swift in Sources */,
 				6E8C8A682B7505800088DC07 /* LibraryView.swift in Sources */,
 				6E8C8A802B76A1DF0088DC07 /* RadioHGrid.swift in Sources */,
 				6E8C8A842B76A7190088DC07 /* StationModel.swift in Sources */,
+				6E7AD6872B83570300E1E13E /* DetailSearchView.swift in Sources */,
 				6EC6083C2B80CF5900028B07 /* PlayerView.swift in Sources */,
 				6E8C8A772B7644830088DC07 /* ListRow.swift in Sources */,
 				6E09B4AF2B7F9980001F3F1B /* SeachView.swift in Sources */,

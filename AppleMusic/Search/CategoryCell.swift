@@ -5,6 +5,7 @@ import SwiftUI
 struct CategoryCell: View {
 
     var category: StationModel
+    @State private var isActive = false
 
     var body: some View {
         VStack {
@@ -17,10 +18,19 @@ struct CategoryCell: View {
                         .foregroundStyle(.white)
                         .bold()
                         .font(.system(size: 17))
-                        .padding([.bottom, .leading], 10)
-                    , alignment: .bottomLeading)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-
+                        .padding([.bottom, .leading], 10), alignment: .bottomLeading)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .onTapGesture {
+                            self.isActive = true
+                        }
+                        .background(
+                            NavigationLink (
+                                destination: DetailSearchView(selectCategory: category),
+                                isActive: $isActive,
+                                label: {
+                                    Text("")
+                                })
+                        )
         }
     }
 }

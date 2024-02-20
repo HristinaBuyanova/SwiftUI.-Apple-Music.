@@ -32,17 +32,21 @@ struct SeachView: View {
                     .padding(.trailing, 120)
                     .padding(.top, 10)
 
-                LazyVGrid(columns: columns, content: {
-                    ForEach(category, id: \.self) {
-                        item in CategoryCell(category: item)
+                LazyVGrid(columns: columns, spacing: 15) {
+                    ForEach(category, id: \.self) { item in
+
+                            CategoryCell(category: item)
+                            }
+                        }
                     }
-                })
-            }
             .navigationTitle("Поиск")
-        }
+                }
         .padding(.bottom, 60)
-    }
-}
+            }
+
+        }
+
+
 
 #Preview {
     SeachView()
