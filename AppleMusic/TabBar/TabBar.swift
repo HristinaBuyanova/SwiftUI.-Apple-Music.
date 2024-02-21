@@ -3,6 +3,10 @@
 import SwiftUI
 
 struct TabBar: View {
+
+    @State private var expandSheet = false
+    @Namespace private var animation
+
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
             TabView {
@@ -19,17 +23,25 @@ struct TabBar: View {
                         Text(radio)
                     }
 
-                Text(search)
+//                Text("Поиск")
+                SeachView()
                     .tabItem {
                         Image(systemName: "magnifyingglass")
                         Text(search)
                     }
             }
             .tint(.red)
-            PlayerView()
+
+            if expandSheet {
+                PlayerView(animation: animation, expandSheet: $expandSheet)
+            } else {
+                MiniPlayerView(animation: animation, expandSheet: $expandSheet)
+            }
+
         })
     }
 }
+
 
 #Preview {
     TabBar()
