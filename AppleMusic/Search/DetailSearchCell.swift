@@ -20,11 +20,12 @@ struct DetailSearchCell: View {
                     .font(.subheadline)
                     .foregroundStyle(.gray)
             }
-            .padding(.bottom, 10)
-            
+            .padding(.top, 80)
+
             Image(detailData.imageName)
                 .resizable()
                 .frame(width: 320, height: 220)
+                .aspectRatio(contentMode: .fit)
                 .clipShape(RoundedRectangle(cornerRadius: 15))
                 .overlay(
                     VStack(alignment: .leading) {
@@ -33,7 +34,7 @@ struct DetailSearchCell: View {
                             .font(.callout)
                             .foregroundStyle(.white)
                             .bold()
-                            .padding(10)
+                            .padding()
                     }
                     , alignment: .bottomLeading
                 )
@@ -42,7 +43,7 @@ struct DetailSearchCell: View {
 }
 
 #Preview {
-    DetailSearchView(selectModel: SeachModel.data[0])
+    DetailSearchView(selectModel: SeachModel.data[2])
 }
 
 //#Preview {

@@ -24,17 +24,31 @@ struct CategoryCell: View {
                             self.isActive = true
                         }
                         .background(
-                            NavigationLink (
-                                destination: DetailSearchView(selectModel: category),
-                                isActive: $isActive,
-                                label: {
-                                    Text("")
-                                })
+                            NavigationLink(destination:
+                                DetailSearchView(selectModel: category)
+                            , isActive: $isActive,
+                                           label: {
+                                Text("")
+                            })
                         )
+//                        .background(
+////                            NavigationLink (
+////                                destination: DetailSearchView(selectModel: category),
+////                                isActive: $isActive,
+////                                label: {
+////                                    Text("")
+////                                })
+//                            NavigationLink {
+//                                DetailSearchView(selectModel: category)
+//                            } label: {
+//                                Text("")
+//                            }
+//                        )
         }
     }
 }
 
 #Preview {
-    CategoryCell(category: SeachModel.data[0])
+    CategoryCell(category: SeachModel.data[1])
 }
+

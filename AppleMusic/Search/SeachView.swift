@@ -14,8 +14,8 @@ struct SeachView: View {
                    GridItem(.adaptive(minimum: 100)),]
 
     var body: some View {
-        NavigationStack {
-            ScrollView {
+        NavigationView {
+            ScrollView(.vertical) {
 
                 TextField(
                     "Ваша медиатека"

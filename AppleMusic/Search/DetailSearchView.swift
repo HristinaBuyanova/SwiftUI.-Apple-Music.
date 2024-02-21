@@ -9,13 +9,15 @@ struct DetailSearchView: View {
 
     @Environment(\.dismiss) private var dismiss
 
-    var rows = [GridItem(.flexible())]
+    var rows = [GridItem(.fixed(400))]
+    var rows2 = [GridItem(.fixed(200))]
 
     var body: some View {
         let details = selectModel.detailArray
 
         VStack {
             HStack {
+
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHGrid(rows: rows, spacing: 10) {
                         ForEach(details, id: \.self) { detail in
@@ -42,7 +44,7 @@ struct DetailSearchView: View {
 
             HStack {
                 ScrollView(.horizontal, showsIndicators: false) {
-                    LazyHGrid(rows: rows) {
+                    LazyHGrid(rows: rows2) {
                         ForEach(selectModel.secondImage, id: \.self) { images in
                             HStack {
                                 Image(images)
@@ -68,19 +70,19 @@ struct DetailSearchView: View {
                 Button {
                     dismiss()
                 } label: {
-                    Image("chevron.left")
+                    Image(systemName: "chevron.left")
                         .foregroundStyle(.red)
                 }
 
             }
         }
 
-        toolbar {
+        .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
 
                 } label: {
-                    Image("ellipsis.circle")
+                    Image(systemName: "ellipsis.circle")
                         .foregroundStyle(.red)
                 }
 
@@ -92,5 +94,5 @@ struct DetailSearchView: View {
 
 
 #Preview {
-    DetailSearchView(selectModel: SeachModel.data[0]).colorScheme(.dark)
+    DetailSearchView(selectModel: SeachModel.data[0])
 }
