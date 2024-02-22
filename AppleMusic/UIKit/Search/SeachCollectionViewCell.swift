@@ -21,6 +21,8 @@ class SeachCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.font = .systemFont(ofSize: 14, weight: .bold)
         label.textAlignment = .left
+        label.textColor = .white
+
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -53,7 +55,8 @@ class SeachCollectionViewCell: UICollectionViewCell {
             picture.heightAnchor.constraint(equalToConstant: 120),
 
             title.bottomAnchor.constraint(equalTo: picture.bottomAnchor, constant: -20),
-            title.leadingAnchor.constraint(equalTo: picture.leadingAnchor, constant: 10)
+            title.leadingAnchor.constraint(equalTo: picture.leadingAnchor, constant: 10),
+            title.trailingAnchor.constraint(equalTo: picture.trailingAnchor, constant: -10)
         ])
     }
 
