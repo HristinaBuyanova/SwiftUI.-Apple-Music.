@@ -33,7 +33,7 @@ struct TabBar: View {
                 SeachViewRepresentable()
                     .tabItem {
                         Image(systemName: "magnifyingglass")
-                        Text("UIKit")
+                        Text("Поиск UIKit")
                     }
 
             }
