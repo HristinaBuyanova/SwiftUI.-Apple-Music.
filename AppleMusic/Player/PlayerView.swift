@@ -14,9 +14,9 @@ struct PlayerView: View {
     @State var duration: Double = 0
 
     var body: some View {
-        GeometryReader {
-            let size = $0.size
-            let safeArea = $0.safeAreaInsets
+        GeometryReader { _ in
+//            let size = $0.size
+//            let safeArea = $0.safeAreaInsets
 
             ZStack {
                 RoundedRectangle(cornerRadius: animateContent ? deviceCornerRadius : 0, style: .continuous)
@@ -31,10 +31,9 @@ struct PlayerView: View {
                             .allowsHitTesting(false)
                             .opacity(animateContent ? 1: 0)
                     }
-                    .matchedGeometryEffect(id: "BACKGROUNDVIEW", in: animation)
 
                 LinearGradient(gradient: Gradient(colors: [Color.beige, Color.black.opacity(0.7)]), startPoint: .top, endPoint: .bottom)
-//                    .frame(height: screen)
+
 
                 VStack(spacing: 15) {
                     Button(action: { expandSheet.toggle() },

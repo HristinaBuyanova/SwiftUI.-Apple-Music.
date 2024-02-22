@@ -31,19 +31,6 @@ struct CategoryCell: View {
                                 Text("")
                             })
                         )
-//                        .background(
-////                            NavigationLink (
-////                                destination: DetailSearchView(selectModel: category),
-////                                isActive: $isActive,
-////                                label: {
-////                                    Text("")
-////                                })
-//                            NavigationLink {
-//                                DetailSearchView(selectModel: category)
-//                            } label: {
-//                                Text("")
-//                            }
-//                        )
         }
     }
 }
